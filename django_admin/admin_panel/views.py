@@ -1,4 +1,13 @@
-from django.http import HttpResponse
+from django.http import JsonResponse
+from .models import Student
+
 
 def index(request):
-    return HttpResponse("Django Admin Panel")
+    data = list(
+        Student.objects.values()
+    )
+    return JsonResponse({
+        'status': True,
+        'message': 'success',
+        'data': data
+    })
