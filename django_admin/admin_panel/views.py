@@ -7,7 +7,5 @@ def index(request):
         Student.objects.values()
     )
     return JsonResponse({
-        'status': True,
-        'message': 'success',
-        'data': data
+        'Student': data
     })
