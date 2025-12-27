@@ -3,6 +3,9 @@ from .models import Student
 
 
 class StudentAdmin(admin.ModelAdmin):
+
+#Read Operation
+
     #Fields Display
     list_display = ('Name', 'Roll', 'Technology',)
 
@@ -19,4 +22,7 @@ class StudentAdmin(admin.ModelAdmin):
     ordering = ('Roll',)
 
 
+#Update Operation
+
+    #
 admin.site.register(Student, StudentAdmin)
