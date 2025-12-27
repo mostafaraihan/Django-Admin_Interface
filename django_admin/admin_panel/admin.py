@@ -24,5 +24,9 @@ class StudentAdmin(admin.ModelAdmin):
 
 #Update Operation
 
-    #
+    #Read Only Field
+    readonly_fields = ('Technology','Roll',)
+
+
+
 admin.site.register(Student, StudentAdmin)
