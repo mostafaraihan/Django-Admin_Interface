@@ -4,29 +4,32 @@ from .models import Student
 
 class StudentAdmin(admin.ModelAdmin):
 
-#Read Operation
+# Read Operation
 
-    #Fields Display
-    list_display = ('Name', 'Roll', 'Technology',)
+    # Fields Display
+    list_display = ('Name', 'Roll', 'Technology')
 
-    #Search Field
+    # Search Field
     search_fields = ('Roll',)
 
-    #Filter
+    # Filter
     list_filter = ('Roll',)
 
-    #Per Page
+    # Per Page
     list_per_page = 5
 
-    #Ordering
+    # Ordering
     ordering = ('Roll',)
 
 
-#Update Operation
 
-    #Read Only Field
-    readonly_fields = ('Technology','Roll',)
+# Update Operation
 
+    # Read Only Field
+    readonly_fields = ('Address',)
+
+    # Inline Editing
+    list_editable = ('Technology',)
 
 
 admin.site.register(Student, StudentAdmin)
