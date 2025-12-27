@@ -15,5 +15,8 @@ class StudentAdmin(admin.ModelAdmin):
     #Per Page
     list_per_page = 5
 
+    #Ordering
+    ordering = ('Roll',)
+
 
 admin.site.register(Student, StudentAdmin)
