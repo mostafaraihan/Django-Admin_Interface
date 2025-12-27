@@ -7,7 +7,10 @@ class StudentAdmin(admin.ModelAdmin):
     list_display = ('Name', 'Roll', 'Technology')
 
     #Search Field
-    search_fields = ('Name','Roll')
+    search_fields = ('Roll',)
+
+    #Filter
+    list_filter = ('Name','Roll')
 
 
 admin.site.register(Student, StudentAdmin)
