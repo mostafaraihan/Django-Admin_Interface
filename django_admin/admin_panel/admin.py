@@ -12,5 +12,8 @@ class StudentAdmin(admin.ModelAdmin):
     #Filter
     list_filter = ('Roll',)
 
+    #Per Page
+    list_per_page = 5
+
 
 admin.site.register(Student, StudentAdmin)
